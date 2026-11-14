@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMTELE-RISK | Sistema de Simulación</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <!-- MENÚ LATERAL -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">S</div>
+                <div>
+                    <h2>SIMTELE-RISK</h2>
+                    <span>NUMERICAL SYSTEM</span>
+                </div>
+            </div>
+
+            <div class="menu-label">MENÚ PRINCIPAL</div>
+
+            <nav class="navigation">
+                <button class="nav-item active" data-page="dashboard">
+                    <span>⌂</span> Panel principal
+                </button>
+                <button class="nav-item" data-page="modulo1">
+                    <span>◈</span> Detención de emergencia
+                </button>
+                <button class="nav-item" data-page="modulo2">
+                    <span>⚙</span> Deterioro mecánico
+                </button>
+                <button class="nav-item" data-page="modulo3">
+                    <span>〰</span> Oscilaciones por viento
+                </button>
+                <button class="nav-item" data-page="modulo4">
+                    <span>⌁</span> Sensores
+                </button>
+            </nav>
+
+            <div class="menu-label secondary-label">SISTEMA</div>
+
+            <nav class="navigation">
+                <button class="nav-item" data-page="historial">
+                    <span>◷</span> Historial
+                </button>
+                <button class="nav-item" data-page="informacion">
+                    <span>ⓘ</span> Información
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="status-dot"></div>
+                Sistema preparado
+                <small>Versión 1.0.0</small>
+            </div>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <span class="breadcrumb">SIMTELE-RISK / <span id="breadcrumb-page">Inicio</span></span>
+                    <h2 id="page-title">Panel de control</h2>
+                </div>
+                <div class="topbar-right">
+                    <span class="system-status">
+                        <span class="status-dot"></span> SISTEMA ACTIVO
+                    </span>
+                    <div class="user-avatar">SR</div>
+                </div>
+            </header>
+
+            <div id="page-content">
+
+                <!-- PANEL PRINCIPAL -->
+                <section class="page-section" id="dashboard">
+
+                    <div class="welcome-banner">
+                        <div class="welcome-text">
+                            <span class="eyebrow">PLATAFORMA DE ANÁLISIS NUMÉRICO</span>
+                            <h1>Simulación y análisis<br>de sistemas de transporte</h1>
+                            <p>
+                                Plataforma educativa para el estudio de fenómenos
+                                matemáticos asociados al transporte por cable,
+                                mediante métodos numéricos computacionales.
+                            </p>
+                            <button class="primary-button" data-page="modulo1">
+                                Explorar módulos <span>→</span>
+                            </button>
+                        </div>
+                        <div class="welcome-visual">
+                            <div class="visual-circle">SR</div>
+                            <div class="visual-caption">
+                                <strong>SIMTELE-RISK</strong>
+                                <span>NUMERICAL SIMULATION</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">ENTORNO DE SIMULACIÓN</span>
+                            <h2>Casos de estudio</h2>
+                            <p>Seleccione uno de los cuatro módulos para comenzar.</p>
+                        </div>
+                        <span class="module-count">04 MÓDULOS</span>
+                    </div>
+
+                    <div class="module-grid">
+
+                        <article class="module-card" data-open="modulo1">
+                            <div class="card-top">
+                                <div class="module-icon blue">◈</div>
+                                <span class="module-number">MÓDULO 01</span>
+                            </div>
+                            <h3>Detención de emergencia</h3>
+                            <p>
+                                Análisis de velocidad, tiempo y distancia
+                                durante el frenado de una cabina.
+                            </p>
+                            <div class="card-tags">
+                                <span>EDO</span>
+                                <span>Integración</span>
+                                <span>Raíces</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>Acceder al módulo</span>
+                                <span class="arrow">→</span>
+                            </div>
+                        </article>
+
+                        <article class="module-card" data-open="modulo2">
+                            <div class="card-top">
+                                <div class="module-icon orange">⚙</div>
+                                <span class="module-number">MÓDULO 02</span>
+                            </div>
+                            <h3>Deterioro mecánico</h3>
+                            <p>
+                                Estimación del deterioro y determinación
+                                de umbrales de mantenimiento.
+                            </p>
+                            <div class="card-tags">
+                                <span>Raíces</span>
+                                <span>Sistemas lineales</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>Acceder al módulo</span>
+                                <span class="arrow">→</span>
+                            </div>
+                        </article>
+
+                        <article class="module-card" data-open="modulo3">
+                            <div class="card-top">
+                                <div class="module-icon purple">〰</div>
+                                <span class="module-number">MÓDULO 03</span>
+                            </div>
+                            <h3>Oscilaciones por viento</h3>
+                            <p>
+                                Simulación del desplazamiento y
+                                comportamiento de una cabina ante el viento.
+                            </p>
+                            <div class="card-tags">
+                                <span>EDO</span>
+                                <span>Integración</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>Acceder al módulo</span>
+                                <span class="arrow">→</span>
+                            </div>
+                        </article>
+
+                        <article class="module-card" data-open="modulo4">
+                            <div class="card-top">
+                                <div class="module-icon green">⌁</div>
+                                <span class="module-number">MÓDULO 04</span>
+                            </div>
+                            <h3>Reconstrucción de sensores</h3>
+                            <p>
+                                Recuperación de señales y estimación
+                                de datos faltantes mediante interpolación.
+                            </p>
+                            <div class="card-tags">
+                                <span>Lagrange</span>
+                                <span>Newton</span>
+                                <span>Splines</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>Acceder al módulo</span>
+                                <span class="arrow">→</span>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <div class="bottom-grid">
+                        <div class="info-panel">
+                            <span class="eyebrow">METODOLOGÍA</span>
+                            <h3>Experimentación numérica</h3>
+                            <p>
+                                Cada caso de estudio permitirá analizar tres
+                                escenarios: NORMAL, ESTRÉS y MAL CONDICIONADO,
+                                comparando resultados y errores numéricos.
+                            </p>
+                        </div>
+
+                        <div class="info-panel technical-panel">
+                            <span class="eyebrow">ALCANCE MATEMÁTICO</span>
+                            <h3>5 familias de métodos</h3>
+                            <div class="method-list">
+                                <span>Sistemas lineales</span>
+                                <span>Interpolación</span>
+                                <span>Raíces</span>
+                                <span>Integración</span>
+                                <span>Ecuaciones diferenciales</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- PANTALLAS DE LOS MÓDULOS -->
+                <section class="page-section hidden" id="module-page">
+                    <div class="module-intro">
+                        <div class="module-icon blue" id="detail-icon">◈</div>
+                        <div>
+                            <span class="eyebrow" id="detail-number">MÓDULO</span>
+                            <h2 id="detail-title">Nombre del módulo</h2>
+                            <p id="detail-description">Descripción del caso de estudio.</p>
+                        </div>
+                    </div>
+
+                    <div class="section-heading">
+                        <div>
+                            <h2>Configuración experimental</h2>
+                            <p>Seleccione el escenario que desea estudiar.</p>
+                        </div>
+                    </div>
+
+                    <div class="scenario-grid">
+                        <button class="scenario-card selected" data-scenario="NORMAL">
+                            <span class="scenario-indicator normal"></span>
+                            <strong>NORMAL</strong>
+                            <small>Parámetros nominales</small>
+                        </button>
+                        <button class="scenario-card" data-scenario="ESTRÉS">
+                            <span class="scenario-indicator stress"></span>
+                            <strong>ESTRÉS</strong>
+                            <small>Condiciones exigentes</small>
+                        </button>
+                        <button class="scenario-card" data-scenario="MAL CONDICIONADO">
+                            <span class="scenario-indicator bad"></span>
+                            <strong>MAL CONDICIONADO</strong>
+                            <small>Sensibilidad numérica</small>
+                        </button>
+                    </div>
+
+                    <div class="placeholder-panel">
+                        <div class="placeholder-icon">∑</div>
+                        <h3>Área de simulación</h3>
+                        <p>
+                            Aquí incorporaremos los parámetros, métodos
+                            numéricos, tablas de iteraciones, errores y
+                            gráficas correspondientes a este caso.
+                        </p>
+                        <span class="development-label">MÓDULO EN DESARROLLO</span>
+                    </div>
+
+                    <button class="back-button" data-page="dashboard">
+                        ← Volver al panel principal
+                    </button>
+                </section>
+
+                <!-- HISTORIAL -->
+                <section class="page-section hidden" id="historial">
+                    <div class="placeholder-panel">
+                        <div class="placeholder-icon">◷</div>
+                        <h2>Historial de simulaciones</h2>
+                        <p>En esta sección podremos consultar y recuperar experimentos guardados en la base de datos.</p>
+                        <span class="development-label">EN DESARROLLO</span>
+                    </div>
+                </section>
+
+                <!-- INFORMACIÓN -->
+                <section class="page-section hidden" id="informacion">
+                    <div class="placeholder-panel">
+                        <div class="placeholder-icon">ⓘ</div>
+                        <h2>Acerca de SIMTELE-RISK</h2>
+                        <p>
+                            Proyecto académico de Métodos Numéricos.
+                            Sistema educativo de simulación matemática
+                            inspirado en el transporte por cable de La Paz, Bolivia.
+                        </p>
+                        <span class="development-label">PROYECTO EDUCATIVO</span>
+                    </div>
+                </section>
+
+            </div>
+
+            <footer class="footer">
+                SIMTELE-RISK © 2026 · PROYECTO FINAL DE MÉTODOS NUMÉRICOS
+                <span>LA PAZ - BOLIVIA</span>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="js/numericos.js"></script>
+    <script src="js/errores.js"></script>
+    <script src="js/modulo1.js"></script>
+    <script src="js/modulo2.js"></script>
+    <script src="js/modulo3.js"></script>
+    <script src="js/modulo4.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
